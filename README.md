@@ -124,7 +124,7 @@ I feel if I can use auto encoders and pass its value into the model it might wor
 
 
 #### Conclusions:
-• Non-DL models have performed better than DL-models, I feel the reason could be limited rows of data for training.
-• Gene Data proves to be more accurate while classifying cancer. As of now within the scope of this project we can state that biopsy will classify/detect cancer almost 98% of the time correctly.
-• Mammography dataset along with the CAD we have applied shows good accuracy in detecting cancer, but it is not good as compared to using genome sequence.
-• If we can get more data, or augmented images from mammography. It might help in training our models well.
+• Non-DL models have performed better than DL-models, I feel the reason could be limited rows of data for training. <br>
+• Gene Data proves to be more accurate while classifying cancer. As of now within the scope of this project we can state that biopsy will classify/detect cancer almost 98% of the time correctly. <br>
+• Mammography dataset along with the CAD we have applied shows good accuracy in detecting cancer, but it is not good as compared to using genome sequence. <br>
+• If we can get more data, or augmented images from mammography. It might help in training our models well. <br>
