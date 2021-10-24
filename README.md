@@ -72,3 +72,42 @@ Thus, this disease of controlled cell division is called Cancer.
          This dataset had no missing or null values.
          
   #### Methods & Results :
+  
+   1. Data Cleaning :
+      
+  
+         Method\Dataset |  Mammography  | RNA-seq
+        ---------------|---------------|----------
+        Null values | Replaced categorical with mode.Numerical with mean  | No Null values
+        Imbalance  |  N/A  | SMOTE
+        Correlation | pandas corr() | ANOVA
+        Encoding categorical variables | N/A | keras to_categorical
+        Train/Test split- Stratify | Sklearns’s train_test_split | Defined function
+        
+   2. Models :
+      
+      Here we are using 4 non-dl algorithms : Decision Trees, Logistic Regression, KNN , SVC.
+      Dataset \ Methods | Decision Trees | Logistic Regression | KNN | SVC
+      ------------------|----------------|---------------------|-----|-----
+      Mammography | 0.7529 | 0.799 |0.6951 | 0.7388
+      RNA-seq Gene | 0.9557 | 1.0 | 1.0 | 1.0
+      
+      Discussion: <br>
+      i. RNA-seq Gene dataset performs better with KNN as the dataset was constructed to classify similar aberrations among different cancerous tumors. Thus, there   was some underlying similarities for KNN to group. <br>
+     ii. Mammography dataset worked better with Logistic because it was set of metrics and we had to find a relation among them for each sample to predict the output. Hence it worked well. <br>
+
+   
+   DL models: <br>
+   We have used Fully Connected NN and Conv 1D <br>
+   Dataset \ Methods | Fully Connected NN | Conv 1D
+   ------------------|--------------------|--------
+Mammography | 0.7937 | 0.7977 
+RNA-seq Gene | 0.8796 | 0.8984
+
+![accuracy](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/mamo_dl1.png) ![loss](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/mamo_dl1_loss.png)
+The above graphs are from Mammography dataset for Fully connected NN, it is a good fit. <br>
+
+
+![acuracy](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/mamo_dl2_acc.png)  ![loss](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/mamo_dl2_loss.png)
+
+The above graphs are from Mammography dataset for CONV1 D, it is a good fit, but If I run it for more epochs, it might overfit.
