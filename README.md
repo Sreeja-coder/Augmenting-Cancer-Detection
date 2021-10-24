@@ -111,3 +111,20 @@ The above graphs are from Mammography dataset for Fully connected NN, it is a go
 ![acuracy](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/mamo_dl2_acc.png)  ![loss](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/mamo_dl2_loss.png)
 
 The above graphs are from Mammography dataset for CONV1 D, it is a good fit, but If I run it for more epochs, it might overfit.
+
+
+![accuracy](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/rna_dl_1_acc.png)  ![loss](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/rna_dl_1_loss.png)
+
+These graphs are for RNA dataset for fully connected NN, they are a good fit <br>
+
+![accuracy](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/rna_dl_2_acc.png)  ![loss](https://github.com/Sreeja-coder/Augmenting-Cancer-Detection/blob/main/assets/rna_dl_2_loss.png)
+
+These are the graphs from RNA dataset for CONV 1 D, it is clearly an overfit, I have used a 3 hidden layer conv 1d with two dropout layers and since the data is huge in feature space I had to give very small values for output space else the colab gives up on RAM. <br>
+I feel if I can use auto encoders and pass its value into the model it might work better. <br>
+
+
+#### Conclusions:
+• Non-DL models have performed better than DL-models, I feel the reason could be limited rows of data for training.
+• Gene Data proves to be more accurate while classifying cancer. As of now within the scope of this project we can state that biopsy will classify/detect cancer almost 98% of the time correctly.
+• Mammography dataset along with the CAD we have applied shows good accuracy in detecting cancer, but it is not good as compared to using genome sequence.
+• If we can get more data, or augmented images from mammography. It might help in training our models well.
